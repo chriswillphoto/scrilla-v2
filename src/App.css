@@ -27,4 +27,5 @@
   to { transform: rotate(360deg); }
 }
 
-header.splash { background: linear-gradient(#fff, #A96BCB); height: 80vh; }
+header.splash { background: linear-gradient(#fff, #A96BCB); height: 80vh; color: white; }
+.splash-logo  { width: 50vw; height: auto; }

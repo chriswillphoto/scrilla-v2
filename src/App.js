@@ -7,7 +7,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="splash">
-          <img src={logo} alt="scrilla Logo"/>
+          <img src={logo} alt="scrilla Logo" className="splash-logo"/>
+          <h1>Scrilla</h1>
+          <h2>See where your money's going</h2>
+          <button class="button start-button">Show me the money</button>
         </header>
       </div>
     );

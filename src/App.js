@@ -1,20 +1,21 @@
-import React, { Component } from 'react';
-import logo from './static/makeitrain.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Main from "./pages/Main";
+import User from "./pages/User"
+import { Provider } from "react-redux";
+import { Switch, Route, HashRouter as Router } from "react-router-dom";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="splash">
-          <img src={logo} alt="scrilla Logo" className="splash-logo"/>
-          <h1>Scrilla</h1>
-          <h2>See where your money's going</h2>
-          <button class="button start-button">Show me the money</button>
-        </header>
-      </div>
-    );
-  }
-}
+const Routes = ({store}) => {
+  return (
+    <Provider store={store}>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Main} />
+        <Route exact path="/user" component={User} />
+      </Switch>
+    </Router>
+    </Provider>
+  );
+};
 
-export default App;
+export default Routes;
